@@ -120,25 +120,13 @@ input, select, textarea { font: inherit; color: inherit; }
   gap: 2rem;
 }
 
-.nav-logo { display: flex; align-items: center; gap: .75rem; color: #fff; }
-.nav-logo-icon { width: 30px; height: auto; flex-shrink: 0; }
+.nav-logo { display: flex; align-items: center; }
 
-.nav-logo-text { display: flex; flex-direction: column; line-height: 1; gap: 2px; }
-
-.nav-logo-name {
-  font-family: var(--ff-heading);
-  font-weight: 900;
-  font-size: .9rem;
-  letter-spacing: .14em;
-  color: #fff;
-}
-
-.nav-logo-sub {
-  font-size: .45rem;
-  font-weight: 600;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: #888;
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links { display: flex; align-items: center; gap: 2rem; }
@@ -663,16 +651,13 @@ input, select, textarea { font: inherit; color: inherit; }
   justify-content: space-between; flex-wrap: wrap; gap: 1rem;
 }
 
-.footer-brand { display: flex; align-items: center; gap: .75rem; color: #fff; }
-.footer-logo-icon { width: 24px; height: auto; }
-.footer-logo-name {
-  display: block; font-family: var(--ff-heading);
-  font-weight: 900; font-size: .85rem; letter-spacing: .18em; line-height: 1;
-}
-.footer-logo-sub {
-  display: block; font-size: .44rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: #666; margin-top: 2px;
+.footer-brand { display: flex; align-items: center; }
+
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .footer-copy { font-size: .78rem; color: #555; }
