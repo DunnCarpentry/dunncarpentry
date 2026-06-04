@@ -626,6 +626,12 @@ input, select, textarea {
   color: var(--clr-wood-light);
 }
 
+.contact-details a {
+  color: rgba(255,255,255,.82);
+  transition: color .2s;
+}
+.contact-details a:hover { color: #fff; }
+
 
 /* =============================================
    FOOTER
