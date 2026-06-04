@@ -15,12 +15,23 @@
   <!-- NAV -->
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a href="#top" class="nav-logo">
-        <img src="images/logo-white.png" alt="Dunn Carpentry &amp; Developments" class="nav-logo-img" />
+      <a href="#top" class="nav-logo" aria-label="Dunn Carpentry &amp; Developments — Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 155" width="130" height="77" aria-hidden="true" focusable="false">
+          <rect x="72" y="8" width="8" height="34" fill="#ffffff"/>
+          <polyline points="72,42 128,5" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="square"/>
+          <polyline points="128,5 184,42" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="square"/>
+          <text x="130" y="110" font-family="Montserrat, sans-serif" font-weight="900" font-size="72" fill="#ffffff" text-anchor="middle">DUNN</text>
+          <rect x="68" y="118" width="124" height="3.5" fill="#ffffff"/>
+          <rect x="68" y="138" width="18" height="1.5" fill="#ffffff"/>
+          <rect x="172" y="138" width="18" height="1.5" fill="#ffffff"/>
+          <text x="130" y="144" font-family="Inter, sans-serif" font-weight="600" font-size="8" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">CARPENTRY &amp; DEVELOPMENTS</text>
+        </svg>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -32,17 +43,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <p class="hero-tagline">Residential &nbsp;—&nbsp; Commercial &nbsp;—&nbsp; Bespoke Joinery</p>
-      <h1 class="hero-heading">DUNN<br />CARPENTRY.</h1>
-      <p class="hero-sub">South Wales based specialist carpentry and joinery delivering high quality bespoke interiors, precision second fix carpentry, and commercial fit outs.</p>
+      <h1 class="hero-heading">BUILT RIGHT.<br />BUILT TO LAST.</h1>
+      <p class="hero-tagline">RESIDENTIAL &nbsp;—&nbsp; COMMERCIAL &nbsp;—&nbsp; BESPOKE JOINERY</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
         <a href="#projects" class="btn btn-ghost">View Projects</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
+    <div class="hero-scroll-hint" aria-hidden="true">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
@@ -55,8 +64,8 @@
         <p class="section-eyebrow">What we do</p>
         <h2 class="section-title">Our Services.</h2>
       </div>
-      <div class="services-cols">
 
+      <div class="services-cols">
         <div class="services-col">
           <h3 class="services-col-heading">Commercial</h3>
           <ul class="services-list">
@@ -68,7 +77,7 @@
           </ul>
         </div>
 
-        <div class="services-divider"></div>
+        <div class="services-divider" aria-hidden="true"></div>
 
         <div class="services-col">
           <h3 class="services-col-heading">Residential</h3>
@@ -80,7 +89,6 @@
             <li>Staircases</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -93,15 +101,15 @@
         <h2 class="section-title">Projects.</h2>
       </div>
 
-      <div class="projects-tabs">
-        <button class="tab-btn active" data-tab="commercial">Commercial</button>
-        <button class="tab-btn" data-tab="domestic">Domestic</button>
+      <div class="projects-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="commercial" role="tab" aria-selected="true" aria-controls="tab-commercial">Commercial</button>
+        <button class="tab-btn" data-tab="domestic" role="tab" aria-selected="false" aria-controls="tab-domestic">Domestic</button>
       </div>
 
       <!-- COMMERCIAL PROJECTS -->
-      <div class="tab-panel active" id="tab-commercial">
+      <div class="tab-panel active" id="tab-commercial" role="tabpanel">
 
-        <!-- Project 1 -->
+        <!-- Project 1: Bespoke Shelving Display Unit -->
         <article class="project-entry">
           <div class="project-photos project-photos--3">
             <div class="project-photo project-photo--main">
@@ -111,25 +119,25 @@
               <img src="images/job1-2.jpg" alt="Shelving display unit detail view" loading="lazy" />
             </div>
             <div class="project-photo project-photo--thumb">
-              <img src="images/job1-3.jpg" alt="Shelving unit with integrated column feature" loading="lazy" />
+              <img src="images/job1-3.jpg" alt="Shelving unit with integrated feature panel" loading="lazy" />
             </div>
           </div>
+
           <div class="project-body">
             <h3 class="project-title">Bespoke Shelving Display Unit.</h3>
             <div class="project-meta">
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Cardiff
               </span>
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 ISG
               </span>
             </div>
             <div class="project-description">
               <h4>Project Description</h4>
-              <p>This project involved the full installation of bespoke curved shelving units and integrated joinery features as part of a high end commercial interior refurbishment.</p>
-              <p>Working closely with the design and joinery teams, we delivered custom-built display units using concealed fixings to achieve a seamless, high quality finish throughout the space.</p>
+              <p>Full installation of bespoke curved shelving units and integrated joinery features as part of a high end commercial interior refurbishment. Working closely with the design and joinery teams, we delivered custom-built display units using concealed fixings to achieve a seamless, high quality finish throughout the space.</p>
             </div>
             <div class="project-scope">
               <h4>Scope of Works</h4>
@@ -146,7 +154,7 @@
 
         <div class="project-rule"></div>
 
-        <!-- Project 2 -->
+        <!-- Project 2: Bespoke Timber Slatted Staircase Feature -->
         <article class="project-entry">
           <div class="project-photos project-photos--3">
             <div class="project-photo project-photo--main">
@@ -156,25 +164,25 @@
               <img src="images/job2-2.jpg" alt="Slatted timber balustrade during installation" loading="lazy" />
             </div>
             <div class="project-photo project-photo--thumb">
-              <img src="images/job2-3.jpg" alt="Upper-level walkway slatted panel feature" loading="lazy" />
+              <img src="images/job2-3.jpg" alt="Upper-level walkway slatted timber panel feature" loading="lazy" />
             </div>
           </div>
+
           <div class="project-body">
             <h3 class="project-title">Bespoke Timber Slatted Staircase Feature.</h3>
             <div class="project-meta">
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Birmingham
               </span>
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 BAM
               </span>
             </div>
             <div class="project-description">
               <h4>Project Description</h4>
-              <p>This project involved the manufacturing and installation of bespoke vertical timber slatted balustrades and architectural feature joinery as part of a modern educational facility fit out.</p>
-              <p>The slatted timber panels were precisely cut, assembled, and installed along the main staircase and upper-level walkways, creating a clean design while maintaining safety, durability, and full building compliance within a school environment.</p>
+              <p>Manufacturing and installation of bespoke vertical timber slatted balustrades and architectural feature joinery as part of a modern educational facility fit out. The slatted timber panels were precisely cut, assembled, and installed along the main staircase and upper-level walkways, creating a clean design while maintaining safety, durability, and full building compliance.</p>
             </div>
             <div class="project-scope">
               <h4>Scope of Works</h4>
@@ -190,35 +198,35 @@
 
         <div class="project-rule"></div>
 
-        <!-- Project 3 -->
+        <!-- Project 3: Parkgate Hotel -->
         <article class="project-entry">
           <div class="project-photos project-photos--3">
-            <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+            <div class="project-photo-placeholder project-photo-placeholder--main">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
             <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
             <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
           </div>
+
           <div class="project-body">
             <h3 class="project-title">Parkgate Hotel.</h3>
             <div class="project-meta">
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Cardiff
               </span>
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 BECT
               </span>
             </div>
             <div class="project-description">
               <h4>Project Description</h4>
-              <p>This project involved the manufacturing support and installation of extensive bespoke joinery features throughout the main lobby and hospitality areas of The Parkgate Hotel Cardiff, as part of a high-end luxury hotel fit-out.</p>
-              <p>Works included architectural timber wall panelling, bespoke bar frontage joinery, mirrored feature walls, curved timber doorways, and integrated joinery detailing to create a refined, premium interior finish through the public spaces.</p>
+              <p>Manufacturing support and installation of extensive bespoke joinery features throughout the main lobby and hospitality areas of The Parkgate Hotel Cardiff, as part of a high-end luxury hotel fit-out. Works included architectural timber wall panelling, bespoke bar frontage joinery, mirrored feature walls, curved timber doorways, and integrated joinery detailing.</p>
             </div>
             <div class="project-scope">
               <h4>Scope of Works</h4>
@@ -235,35 +243,35 @@
 
         <div class="project-rule"></div>
 
-        <!-- Project 4 -->
+        <!-- Project 4: Principality Bank -->
         <article class="project-entry">
           <div class="project-photos project-photos--3">
-            <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+            <div class="project-photo-placeholder project-photo-placeholder--main">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
             <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
             <div class="project-photo-placeholder">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             </div>
           </div>
+
           <div class="project-body">
             <h3 class="project-title">Bespoke Joinery Fit-out — Principality Bank.</h3>
             <div class="project-meta">
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Newport
               </span>
               <span class="project-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 Private
               </span>
             </div>
             <div class="project-description">
               <h4>Project Description</h4>
-              <p>This project involved the bespoke joinery manufacture and full interior installation for a newly refurbished Principality Building Society branch in Newport.</p>
-              <p>We delivered precision-fitted joinery throughout the branch interior, working to the highest commercial finish standards to create a professional, welcoming customer environment.</p>
+              <p>Bespoke joinery manufacture and full interior installation for a newly refurbished Principality Building Society branch in Newport. Precision-fitted joinery delivered throughout the branch interior to the highest commercial finish standards.</p>
             </div>
             <div class="project-scope">
               <h4>Scope of Works</h4>
@@ -280,18 +288,18 @@
       </div>
 
       <!-- DOMESTIC PROJECTS -->
-      <div class="tab-panel" id="tab-domestic">
+      <div class="tab-panel" id="tab-domestic" role="tabpanel">
         <div class="projects-placeholder-grid">
-          <div class="project-photo-placeholder">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+          <div class="project-photo-placeholder project-photo-placeholder--grid">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             <span>Photos coming soon</span>
           </div>
-          <div class="project-photo-placeholder">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+          <div class="project-photo-placeholder project-photo-placeholder--grid">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             <span>Photos coming soon</span>
           </div>
-          <div class="project-photo-placeholder">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
+          <div class="project-photo-placeholder project-photo-placeholder--grid">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="2"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 6 6 8-10 16 14"/></svg>
             <span>Photos coming soon</span>
           </div>
         </div>
@@ -332,7 +340,7 @@
     </div>
   </section>
 
-  <!-- CONTACT / QUOTE -->
+  <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header">
@@ -367,7 +375,7 @@
               <select id="service" name="service" required>
                 <option value="" disabled selected>Select a service…</option>
                 <optgroup label="Commercial">
-                  <option value="Shopfitting & Interior Fit-out">Shopfitting &amp; Interior Fit-out</option>
+                  <option value="Shopfitting &amp; Interior Fit-out">Shopfitting &amp; Interior Fit-out</option>
                   <option value="Office Interiors">Office Interiors</option>
                   <option value="Hospitality Fit-out">Hospitality Fit-out</option>
                   <option value="Second Fix Carpentry">Second Fix Carpentry</option>
@@ -375,8 +383,8 @@
                 </optgroup>
                 <optgroup label="Residential">
                   <option value="Bespoke Wardrobes">Bespoke Wardrobes</option>
-                  <option value="Media Wall & Feature Joinery">Media Wall &amp; Feature Joinery</option>
-                  <option value="Alcove Units & Cabinetry">Alcove Units &amp; Cabinetry</option>
+                  <option value="Media Wall &amp; Feature Joinery">Media Wall &amp; Feature Joinery</option>
+                  <option value="Alcove Units &amp; Cabinetry">Alcove Units &amp; Cabinetry</option>
                   <option value="Kitchen">Kitchen</option>
                   <option value="Staircase">Staircase</option>
                 </optgroup>
@@ -429,13 +437,13 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Send Enquiry
           </button>
-          <p class="form-note"><span class="req">*</span> Required &nbsp;·&nbsp; Your details will never be shared.</p>
+          <p class="form-note"><span class="req">*</span> Required &nbsp;&middot;&nbsp; Your details will never be shared.</p>
 
           <div class="form-success" id="formSuccess" hidden>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             <div>
               <strong>Enquiry sent!</strong>
               <p>Thanks — we'll be in touch within one working day.</p>
@@ -446,27 +454,27 @@
 
         <div class="contact-aside">
           <a class="whatsapp-block" href="https://wa.me/447814418831?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20job" target="_blank" rel="noopener">
-            <svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
+            <svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
             <div class="wa-text">
               <strong>Message us on WhatsApp</strong>
               <span>Tap to open a chat</span>
             </div>
-            <svg class="wa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            <svg class="wa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
 
           <div class="contact-info-block">
             <h3>Other ways to reach us</h3>
             <ul class="contact-details">
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.54 3.38 2 2 0 0 1 3.5 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.65a16 16 0 0 0 5.44 5.44l1.54-1.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.54 3.38 2 2 0 0 1 3.5 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.65a16 16 0 0 0 5.44 5.44l1.54-1.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <a href="tel:07814418831">07814 418831</a>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <a href="mailto:info@dunncarpentry.co.uk">info@dunncarpentry.co.uk</a>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 <span>Mon – Fri, 8am – 6pm</span>
               </li>
             </ul>
@@ -477,9 +485,9 @@
     </div>
   </section>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
+  <!-- FLOATING WHATSAPP FAB -->
   <a class="whatsapp-fab" href="https://wa.me/447814418831?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20job" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="26" height="26" aria-hidden="true"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
     <span class="fab-label">WhatsApp</span>
   </a>
 
@@ -487,10 +495,21 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo-white.png" alt="Dunn Carpentry &amp; Developments" class="footer-logo-img" />
+        <a href="#top" aria-label="Dunn Carpentry &amp; Developments — Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 155" width="110" height="66" aria-hidden="true" focusable="false">
+            <rect x="72" y="8" width="8" height="34" fill="#ffffff"/>
+            <polyline points="72,42 128,5" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="square"/>
+            <polyline points="128,5 184,42" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="square"/>
+            <text x="130" y="110" font-family="Montserrat, sans-serif" font-weight="900" font-size="72" fill="#ffffff" text-anchor="middle">DUNN</text>
+            <rect x="68" y="118" width="124" height="3.5" fill="#ffffff"/>
+            <rect x="68" y="138" width="18" height="1.5" fill="#ffffff"/>
+            <rect x="172" y="138" width="18" height="1.5" fill="#ffffff"/>
+            <text x="130" y="144" font-family="Inter, sans-serif" font-weight="600" font-size="8" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">CARPENTRY &amp; DEVELOPMENTS</text>
+          </svg>
+        </a>
       </div>
       <p class="footer-copy">&copy; 2026 Dunn Carpentry &amp; Developments. All rights reserved.</p>
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
