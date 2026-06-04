@@ -154,46 +154,115 @@
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Get in touch</p>
-        <h2 class="section-title">Request a Free Quote</h2>
-        <p class="section-desc">Tell us about your project and we'll get back to you within one working day.</p>
+        <h2 class="section-title">Job Enquiry</h2>
+        <p class="section-desc">Fill in the form and we'll get back to you within one working day — or message us directly on WhatsApp.</p>
       </div>
       <div class="contact-wrapper">
-        <form class="contact-form" id="contactForm" novalidate>
+
+        <!-- FORM — action points to Formspree; sign up at formspree.io to get your form ID -->
+        <form class="contact-form" id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST" novalidate>
+
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name</label>
+              <label for="name">Full Name <span class="req">*</span></label>
               <input type="text" id="name" name="name" placeholder="Jane Smith" required />
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
+              <label for="email">Email Address <span class="req">*</span></label>
               <input type="email" id="email" name="email" placeholder="jane@example.com" required />
             </div>
           </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="phone">Phone Number</label>
               <input type="tel" id="phone" name="phone" placeholder="07700 900000" />
             </div>
             <div class="form-group">
-              <label for="service">Service Required</label>
+              <label for="service">Type of Work <span class="req">*</span></label>
               <select id="service" name="service" required>
                 <option value="" disabled selected>Select a service…</option>
-                <option value="renovations">Home Renovations</option>
-                <option value="kitchens">Kitchens</option>
-                <option value="wardrobes">Wardrobes</option>
-                <option value="cabinetry">Bespoke Cabinetry</option>
-                <option value="other">Other / Not Sure</option>
+                <option value="Home Renovations">Home Renovations</option>
+                <option value="Kitchens">Kitchens</option>
+                <option value="Wardrobes">Wardrobes</option>
+                <option value="Bespoke Cabinetry">Bespoke Cabinetry</option>
+                <option value="Other / Not Sure">Other / Not Sure</option>
               </select>
             </div>
           </div>
-          <div class="form-group form-group-full">
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message" rows="5" placeholder="Describe what you're looking for, timescales, or any other details…" required></textarea>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Town / Postcode <span class="req">*</span></label>
+              <input type="text" id="location" name="location" placeholder="e.g. Manchester, M1" required />
+            </div>
+            <div class="form-group">
+              <label for="budget">Rough Budget</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select a range…</option>
+                <option value="Under £1,000">Under £1,000</option>
+                <option value="£1,000 – £3,000">£1,000 – £3,000</option>
+                <option value="£3,000 – £7,500">£3,000 – £7,500</option>
+                <option value="£7,500 – £15,000">£7,500 – £15,000</option>
+                <option value="£15,000+">£15,000+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-          <p class="form-note">We respect your privacy. Your details will never be shared.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="start">Preferred Start Date</label>
+              <input type="text" id="start" name="start_date" placeholder="e.g. August, ASAP, flexible" />
+            </div>
+            <div class="form-group">
+              <label for="source">How did you hear about us?</label>
+              <select id="source" name="source">
+                <option value="" disabled selected>Select…</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Word of mouth">Word of mouth</option>
+                <option value="Social media">Social media</option>
+                <option value="Checkatrade / Rated People">Checkatrade / Rated People</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group form-group-full">
+            <label for="message">Describe the Job <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="Tell us what you need — the more detail the better. Include room sizes, materials in mind, or anything else relevant." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Enquiry
+          </button>
+          <p class="form-note"><span class="req">*</span> Required fields &nbsp;·&nbsp; We respect your privacy. Your details will never be shared.</p>
+
+          <div class="form-success" id="formSuccess" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <strong>Enquiry sent!</strong>
+              <p>Thanks — we'll be in touch within one working day.</p>
+            </div>
+          </div>
+
         </form>
+
         <div class="contact-aside">
+          <!-- WhatsApp CTA -->
+          <a class="whatsapp-block" href="https://wa.me/447814418831?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20job" target="_blank" rel="noopener">
+            <svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
+            <div class="wa-text">
+              <strong>Message us on WhatsApp</strong>
+              <span>Tap to open a chat</span>
+            </div>
+            <svg class="wa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
           <div class="contact-info-block">
             <h3>Other ways to reach us</h3>
             <ul class="contact-details">
@@ -212,9 +281,16 @@
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="whatsapp-fab" href="https://wa.me/447814418831?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20job" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="28" height="28"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.31.63 4.57 1.82 6.55L3 29l6.65-1.74A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.43 17.55c-.27.76-1.56 1.46-2.14 1.54-.54.08-1.23.11-1.98-.13-.46-.14-1.04-.33-1.79-.65-3.14-1.35-5.19-4.5-5.35-4.71-.16-.21-1.29-1.71-1.29-3.27s.82-2.32 1.11-2.63c.29-.31.63-.39.84-.39.21 0 .42.01.6.02.19.01.45-.07.7.54.27.63.91 2.24.99 2.4.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.18.31.82 1.35 1.76 2.18 1.21 1.07 2.23 1.4 2.54 1.56.31.16.49.13.67-.08.18-.21.78-.91 1-.22.22.69.22 1.28.16 1.54z" fill="currentColor"/></svg>
+    <span class="fab-label">WhatsApp</span>
+  </a>
 
   <!-- FOOTER -->
   <footer class="site-footer">

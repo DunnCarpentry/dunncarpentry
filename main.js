@@ -1,5 +1,5 @@
 // Nav: add 'scrolled' class after hero
-const header = document.getElementById('top') ? document.querySelector('.site-header') : null;
+const header = document.querySelector('.site-header');
 if (header) {
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -12,28 +12,46 @@ const navLinks = document.getElementById('navLinks');
 if (toggle && navLinks) {
   toggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-expanded', String(open));
   });
-  // Close on link click
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 }
 
-// Contact form — client-side feedback only (no backend wired up)
+// Job enquiry form — submits to Formspree via fetch, shows inline success
 const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', (e) => {
+const submitBtn = document.getElementById('submitBtn');
+const formSuccess = document.getElementById('formSuccess');
+
+if (form && submitBtn && formSuccess) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
-    btn.textContent = 'Message Sent!';
-    btn.disabled = true;
-    btn.style.background = '#4caf82';
-    form.reset();
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      btn.style.background = '';
-    }, 4000);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        form.reset();
+        formSuccess.hidden = false;
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        submitBtn.style.display = 'none';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Send Enquiry`;
+      alert('Something went wrong — please try emailing us directly at info@dunncarpentry.co.uk');
+    }
   });
 }
